@@ -1,0 +1,3 @@
+.vscode
+main/libs/free-rtos-source/portable/*
+!main/libs/free-rtos-source/portable/readme.txt
