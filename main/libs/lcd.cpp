@@ -9,7 +9,7 @@ void setupLCD(){
   lcd.begin(16, 2);
 }
 
-void showMessage(char msg[], uint8_t line){
+void showMessage(String msg, uint8_t line){
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
   lcd.setCursor(0, line);

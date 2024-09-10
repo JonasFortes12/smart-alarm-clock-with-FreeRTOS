@@ -10,3 +10,7 @@
 #define D5_PIN 12 
 #define D6_PIN 14 
 #define D7_PIN 27
+
+// Real time clock pins:
+#define SDA_PIN 21
+#define SCL_PIN 22

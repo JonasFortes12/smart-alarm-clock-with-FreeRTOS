@@ -4,6 +4,6 @@ void setupLCD();
 
 void clearLCD();
 
-void showMessage(char msg[], uint8_t line);
+void showMessage(String msg, uint8_t line);
 
 
