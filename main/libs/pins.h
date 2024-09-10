@@ -14,3 +14,6 @@
 // Real time clock pins:
 #define SDA_PIN 21
 #define SCL_PIN 22
+
+// sound sensor pins:
+#define SOUND_SENSOR_PIN 34

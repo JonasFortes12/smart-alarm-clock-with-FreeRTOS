@@ -1,5 +1,6 @@
 #include "libs/lcd.h"
 #include "libs/real_time_clock.h"
+#include "libs/noise_sensor.h"
 
 
 
@@ -16,7 +17,7 @@ void setup() {
     // Initialize the LCD
     setupLCD();
     clearLCD();
-  
+  pinMode(SOUND_SENSOR_PIN, INPUT); // Set the signal pin as input
 }
 
 
@@ -32,5 +33,6 @@ void loop () {
     showMessage(get_date(), 1);
 
     
-    delay(1000);
+    Serial.println(is_noise_detected());
+    delay(100);
 }
