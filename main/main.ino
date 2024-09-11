@@ -22,7 +22,8 @@ void setup() {
     // Initialize the buzzer
     setup_sounds();
 
-  pinMode(SOUND_SENSOR_PIN, INPUT); // Set the signal pin as input
+    // Initialize the noise sensor
+    setup_noise_sensor();
 }
 
 
