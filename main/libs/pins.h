@@ -21,3 +21,6 @@
 
 // buzzer pin:
 #define BUZZER_PIN 25
+
+// Stop button pin:
+#define STOP_BUTTON_PIN 26
