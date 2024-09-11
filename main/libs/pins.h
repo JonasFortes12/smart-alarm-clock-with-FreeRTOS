@@ -15,5 +15,8 @@
 #define SDA_PIN 21
 #define SCL_PIN 22
 
-// sound sensor pins:
+// sound sensor pin:
 #define SOUND_SENSOR_PIN 34
+
+// buzzer pin:
+#define BUZZER_PIN 25
