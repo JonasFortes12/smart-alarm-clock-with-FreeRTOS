@@ -1,7 +1,8 @@
+// pir pin
+#define PIR_PIN 32
 
 // Actuator pins definition:
 #define BUZZER_PIN 33
-
 
 //LCD pins:
 #define RS_PIN 15
