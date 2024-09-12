@@ -1,4 +1,4 @@
-#include "sounds.cpp"
+#include "rings.cpp"
 
 void setup_sounds();
 

@@ -1,5 +1,5 @@
 #include "pins.h"
-#include "sounds.h"
+#include "rings.h"
 #include "lcd.h"
 #include "pir.h"
 #include "noise_sensor.h"
