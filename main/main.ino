@@ -1,52 +1,33 @@
-#include "libs/lcd.h"
-#include "libs/real_time_clock.h"
-#include "libs/noise_sensor.h"
-#include "libs/sounds.h"
-#include "libs/pir.h"
+#include "libs/services.h"
 
 
 
 ///////////////////////////////////////// Setup ///////////////////////////////////
 void setup() {
+    // setup the modules services ( RTC, LCD, Buzzer, Noise Sensor, PIR Sensor)
+    setup_modules_services();
 
-    // Initialize Serial communication
-    Serial.begin(9600);
-
-    // Initialize the RTC
-    rtc_setup();
-    set_time();
-
-    // Initialize the LCD
-    setupLCD();
-    clearLCD();
-
-    // Initialize the buzzer
-    setup_sounds();
-
-    // Initialize the noise sensor
-    setup_noise_sensor();
-
-    // Initialize the PIR sensor
-    setup_pir();
+    set_alarm_time(0, 57, 0);
 }
 
 
 ///////////////////////////////////////// Main Loop ///////////////////////////////////
 void loop () {
-    
-    // update the time
+
+    // Update the current time
     now = rtc.now();
 
-
     Serial.println(get_time());
-    showMessage(get_time(), 0);
-    showMessage(get_date(), 1);
-
-    
-    Serial.println(is_noise_detected());
-    Serial.println(is_pushed_stop_button());
-    Serial.println(is_moviment_detected());
-    delay(500);
-
+    delay(1000);
+    // Check if the alarm time has arrived
+    if(is_alarm_time()){
+        // Ring the alarm
+        showMessage("Alarm Ringing..",0);
+        ring_soft_sound();
+        delay(100);
+        ring_soft_sound();
+        delay(100);
+        ring_soft_sound();
+    }
     
 }
