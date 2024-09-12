@@ -26,6 +26,6 @@ bool is_pushed_stop_button(){
 }
 
 void stop_sound(){
-    Serial.println("Stop button pushed");
+    Serial.println("---> Sound Stoped.");
     digitalWrite(BUZZER_PIN, LOW);
 }

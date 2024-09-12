@@ -16,3 +16,5 @@ void clear_alarm();
 
 bool is_alarm_time();
 
+void set_snooze_time(int minutes);
+

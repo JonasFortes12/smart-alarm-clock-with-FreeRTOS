@@ -8,10 +8,11 @@ DateTime now; // Create a DateTime object to hold the current time
 
 
 // Alarm time configuration
-int alarm_hour = 0;
-int alarm_minute = 0;
-int alarm_second = 0;
-int alarm_active = false;
+int alarm_hour = NULL;
+int alarm_minute = NULL;
+int alarm_second = NULL;
+int alarm_defined = false;
+int alarm_ringing = false;
 
 // Function to setup the RTC
 void rtc_setup(){
@@ -50,7 +51,6 @@ String get_date() {
     return date;
 }
 
-
 // Function to set the initial date and time on the RTC
 void set_time() {
     rtc.adjust(DateTime(__DATE__, __TIME__)); // Set RTC time to compile time
@@ -61,20 +61,36 @@ void set_alarm_time(int hour, int minute, int second) {
     alarm_hour = hour;
     alarm_minute = minute;
     alarm_second = second;
-    alarm_active = true;
+    alarm_defined = true;
 }
 
 // Function to clear the alarm
 void clear_alarm() {
-    alarm_active = false;
+    alarm_hour = NULL;
+    alarm_minute = NULL;
+    alarm_second = NULL;
+    alarm_defined = false;
 }
 
 // Function to check if the alarm time has been reached
 bool is_alarm_time() {
-    if (alarm_active) {
+    if (alarm_defined) {
         if (now.hour() == alarm_hour && now.minute() == alarm_minute && now.second() == alarm_second) {
             return true;
         }
     }
     return false;
+}
+
+// Function to set the snooze time
+void set_snooze_time(int minutes){
+    Serial.println("Snooze time set to " + String(minutes) + " minutes");
+    alarm_minute += minutes;
+    if(alarm_minute >= 60){
+        alarm_minute -= 60;
+        alarm_hour++;
+        if(alarm_hour >= 24){
+            alarm_hour = 0;
+        }
+    }
 }

@@ -5,5 +5,5 @@ void setup_noise_sensor(){
 }
 
 bool is_noise_detected(){
-    return digitalRead(SOUND_SENSOR_PIN);
+    return !digitalRead(SOUND_SENSOR_PIN);
 }
