@@ -56,7 +56,11 @@ The FreeRTOS library was added to this project by copying the kernel content fro
 
 
 ## Prototyping and Materials
+<img src="./assets/hardware.jpg" alt="Dependencies Diagram" width="80%"/>
 
+### Materials:
+ - ESP32-WROOM-32: The microcontroller used in this project.
+ 
 
 
 ## Contributing
