@@ -8,7 +8,7 @@ This project involves the development of a smart alarm clock using FreeRTOS. The
 <img src="./assets/Desing Alarm System.png" alt="Alarm System Design" width="80%"/>
 
 ### Dependencies Diagram
-<img src="./assets/Dependencies Diagram.png" alt="Dependencies Diagram" width="50%"/>
+<img src="./assets/Dependencies Diagram.png" alt="Dependencies Diagram" width="80%"/>
 
 #### Components:
 - **Main**: The main file that contains the setup and tasks initialization.
@@ -60,7 +60,13 @@ The FreeRTOS library was added to this project by copying the kernel content fro
 
 ### Materials:
  - ESP32-WROOM-32: The microcontroller used in this project.
- 
+ - XD-74 module: Sound detectoon sensor.
+ - PIR Sensor: Motion detection sensor.
+ - Push Button: User input.
+ - DS3231 module: Real-Time Clock.
+ - LCD 16x2: Display.
+ - Buzzer: Sound output.
+ - Breadboard and wires.
 
 
 ## Contributing
