@@ -39,7 +39,9 @@ This project involves the development of a smart alarm clock using FreeRTOS. The
         ├── Services
 ```
 ### FreeRTOS Integration
-The FreeRTOS library was added to this project by copying the kernel content from the [official repository](https://github.com/FreeRTOS/FreeRTOS-Kernel).
+> [!NOTE]
+> The FreeRTOS library was added to this project by copying the kernel content from the [official repository](https://github.com/FreeRTOS/FreeRTOS-Kernel).
+
 
 
 ## Current Features
