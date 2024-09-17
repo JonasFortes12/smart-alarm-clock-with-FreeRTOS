@@ -51,6 +51,8 @@ This project involves the development of a smart alarm clock using FreeRTOS. The
 - **Snooze functionality**: When the alarm rings, the system read the enviroment moviment and if the user is moving, the alarm will snooze for 5 minutes.
 
 ## Next Features
+<img src="./assets/Firebase-ESP32-Web-App.png" alt="Dependencies Diagram" width="80%"/>
+
 - **User interface**: The system will have a user web interface to set the alarm clock. The web app will connect to the system using the firebase API.
 - **Real-time clock management**: The system can set the current time and date using the user interface.
 - **Multiple alarm settings**: The user can set multiple alarms with different times and days of the week and rename them.

@@ -13,6 +13,7 @@ int alarm_minute = NULL;
 int alarm_second = NULL;
 int alarm_defined = false;
 int alarm_ringing = false;
+int snooze_time = 5;
 
 // Function to setup the RTC
 void rtc_setup(){
@@ -57,10 +58,11 @@ void set_time() {
 }
 
 // Function to set the alarm time
-void set_alarm_time(int hour, int minute, int second) {
+void set_alarm_time(int hour, int minute, int second, int snooze){
     alarm_hour = hour;
     alarm_minute = minute;
     alarm_second = second;
+    snooze_time = snooze;
     alarm_defined = true;
 }
 

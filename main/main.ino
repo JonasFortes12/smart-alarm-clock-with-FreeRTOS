@@ -18,12 +18,12 @@ void setup()
     // Create tasks
     xTaskCreate(update_time_on_lcd_task, "Update Time", 8192, NULL, 1, NULL);  // Increased to 8192
     xTaskCreate(verify_alarm_time_task, "Verify Alarm", 8192, NULL, 2, NULL);  // Increased to 8192
-    xTaskCreate(verify_moviment_task, "Verify Movement", 4096, NULL, 3, NULL); // Increased to 4096
+    xTaskCreate(verify_moviment_task, "Verify Moviment", 4096, NULL, 3, NULL); // Increased to 4096
     xTaskCreate(verify_noise_task, "Verify Noise", 4096, NULL, 3, NULL);       // Increased to 4096
     xTaskCreate(log, "Log Task", 8192, NULL, 1, NULL);                         // Increased to 8192
 
-    // Define time for the alarm
-    set_alarm_time(20, 33, 0); // Set the alarm time to 4:25:00
+    // Define time for the alarm (Hour, Minute, Second, Snooze Time)
+    set_alarm_time(13, 40, 0, 2);
 }
 
 ///////////////////////////////////////// Main Loop ///////////////////////////////////

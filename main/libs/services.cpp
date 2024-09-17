@@ -114,7 +114,7 @@ void verify_moviment_task(void *pvParameters)
     {
         if (is_moviment_detected() && alarm_ringing)
         {
-            set_snooze_time(5);    // add 5 minutes to the snooze time
+            set_snooze_time(snooze_time);    // add x minutes to the snooze time
             stop_sound();          // stop the alarm
             alarm_ringing = false; // set the alarm as not ringing
             if (ringAlarmTaskHandle != NULL)
@@ -148,6 +148,7 @@ void log(void *pvParameters)
         Serial.println("Noise: " + String(is_noise_detected()));
         Serial.println("Button: " + String(is_pushed_stop_button()));
         Serial.println("Alarm Time Defined: " + String(alarm_hour) + ":" + String(alarm_minute) + ":" + String(alarm_second));
+        Serial.println("Alarm Defined: " + String(alarm_defined));
         Serial.println("-----------------------------------------");
         vTaskDelay(1000 / portTICK_PERIOD_MS); // Wait for 1000ms
     }
